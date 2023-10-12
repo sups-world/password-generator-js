@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password generator</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
   </head>
   <body>
     <div class="container">
       <h2>Password Generator</h2>
+      <div class="maximum">
+        <p>Set password length here</p>
+        <input type="range" id="length" min="8" max="14" step="1" />
+        <p>Password length: <output id="slider-value"></output></p>
+      </div>
       <div class="input-container">
         <input
           type="text"
           id="input"
           class="input"
-          placeholder="create password"
+          placeholder="click on Generate button"
           readonly
         />
       </div>
       <button class="btn">Generate</button>
+      <button class="copy-btn" id="copy-btn">Copy</button>
+      <button class="clear-btn" id="clear-btn">Clear</button>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
