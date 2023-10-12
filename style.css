@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #cca8e9;
+}
+
+.container {
+  background-color: #c3bef0;
+  width: 500px;
+  margin: 50px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.set {
+  text-align: start;
+  margin-left: 18px;
+  font-size: 18px;
+}
+
+.p-length {
+  text-align: start;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.input-container {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.input {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+button {
+  background-color: #cadefc;
+}
+
+.btn {
+}
+
+.copy-btn {
+}
+
+.clear-btn {
+}
