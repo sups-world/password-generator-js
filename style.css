@@ -39,17 +39,30 @@ h2 {
 .input {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  height: 30px;
+  max-width: 250px;
+  width: 100%;
 }
 
+.btn-family {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
 button {
   background-color: #cadefc;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bolder;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.btn {
-}
-
-.copy-btn {
-}
-
-.clear-btn {
+button:hover {
+  transform: scale(1.5);
+  background-color: #f67280;
+  color: white;
 }
