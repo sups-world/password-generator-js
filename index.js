@@ -1,8 +1,19 @@
 const btnElement = document.querySelector(".btn");
 const inputElement = document.getElementById("input");
 
+const sliderInputElement = document.getElementById("length");
+const sliderOutputElement = document.getElementById("slider-value");
+
 const copyBtnElement = document.getElementById("copy-btn");
 const clearBtnElement = document.getElementById("clear-btn");
+
+// for the slider value
+sliderOutputElement.textContent = sliderInputElement.value;
+
+sliderInputElement.addEventListener("input", (e) => {
+  e.preventDefault();
+  sliderOutputElement.textContent = e.target.value;
+});
 
 btnElement.addEventListener("click", () => {
   generatePassword();
@@ -19,7 +30,7 @@ clearBtnElement.addEventListener("click", () => {
 function generatePassword() {
   const chars =
     "abcdefghijklmnopqrstuvwxtz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%";
-  const passwordLength = 8;
+  const passwordLength = sliderOutputElement.value;
   let password = "";
 
   for (let index = 0; index < passwordLength; index++) {
