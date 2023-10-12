@@ -1,10 +1,15 @@
 const btnElement = document.querySelector(".btn");
 const inputElement = document.getElementById("input");
 
+const copyBtnElement = document.getElementById("copy-btn");
+
 btnElement.addEventListener("click", () => {
   generatePassword();
 });
 
+copyBtnElement.addEventListener("click", () => {
+  copyPassword();
+});
 function generatePassword() {
   const chars =
     "abcdefghijklmnopqrstuvwxtz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%";
@@ -18,4 +23,11 @@ function generatePassword() {
   }
 
   inputElement.value = password;
+}
+
+function copyPassword() {
+  inputElement.select();
+  inputElement.setSelectionRange(0, 9999);
+  navigator.clipboard.writeText(inputElement.value);
+  alert(`${inputElement.value} ::: has been copied.Please paste as needed`);
 }
